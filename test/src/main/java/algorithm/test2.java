@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -63,7 +65,7 @@ public class test2 {
             String data = sc.next();
             String[] dataArray = data.split(" ");
             float z = 0;
-            for (int j = 0; j < f - 1; j++) {
+            for (int j = 0; j < f ; j++) {
                 z = z + Float.valueOf(dataArray[j]);
             }
             data2.add(z);

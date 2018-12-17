@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -37,6 +39,6 @@ public class test1 {
                 listb.remove(0);
             }
         }
-        System.out.println(listc.toArray());
+        System.out.println(listc.toArray().toString());
     }
 }

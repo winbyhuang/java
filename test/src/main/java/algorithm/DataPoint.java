@@ -1,3 +1,5 @@
+package algorithm;
+
 /**
  * @author Winby
  * @date 2018/7/18  10:57

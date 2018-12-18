@@ -1,4 +1,4 @@
-package collection.hashMap;
+package map.hashMap;
 
 /**
  * @author Winby

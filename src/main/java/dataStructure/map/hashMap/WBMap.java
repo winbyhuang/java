@@ -1,4 +1,4 @@
-package map.hashMap;
+package main.java.dataStructure.map.hashMap;
 
 /**
  * @author Winby

@@ -1,7 +1,5 @@
 package com.winby.algorithm;
 
-import com.winby.algorithm.DataPoint;
-import com.winby.algorithm.RegressionLine;
 
 import java.util.ArrayList;
 import java.util.List;

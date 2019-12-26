@@ -10,7 +10,7 @@ import java.util.List;
  * @update
  * @since v1.0.0
  */
-public class WBHashMap<K, V> implements com.winby.dataStructure.map.hashMap.WBMap<K, V> {
+public class WBHashMap<K, V> implements WBMap<K, V> {
 
     // aka 16
     static int defaultLength = 1 << 4;
@@ -117,7 +117,7 @@ public class WBHashMap<K, V> implements com.winby.dataStructure.map.hashMap.WBMa
      * @param <K>
      * @param <V>
      */
-    static class Entry<K, V> implements com.winby.dataStructure.map.hashMap.WBMap.Entry<K, V> {
+    static class Entry<K, V> implements WBMap.Entry<K, V> {
         K k;
         V v;
         Entry<K, V> next;
@@ -141,7 +141,7 @@ public class WBHashMap<K, V> implements com.winby.dataStructure.map.hashMap.WBMa
 
     public static void main(String[] args) {
         HashMap<String, String> hashMap = new HashMap();
-        com.winby.dataStructure.map.hashMap.WBMap<String, String> wbMap = new WBHashMap();
+        WBMap<String, String> wbMap = new WBHashMap();
         Long s1 = System.currentTimeMillis();
         for (int i = 0; i < 1000000; i++) {
             hashMap.put("wb" + i, "test"+ i);

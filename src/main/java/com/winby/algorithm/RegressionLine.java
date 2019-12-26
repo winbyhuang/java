@@ -1,7 +1,5 @@
 package com.winby.algorithm;
 
-import com.winby.algorithm.DataPoint;
-
 
 import java.util.ArrayList;
 

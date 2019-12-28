@@ -1,4 +1,4 @@
-package com.winby.dataStructure.map.hashMap;
+package com.winby.tool.hashMap;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -142,19 +142,20 @@ public class WBHashMap<K, V> implements WBMap<K, V> {
     public static void main(String[] args) {
         HashMap<String, String> hashMap = new HashMap();
         WBMap<String, String> wbMap = new WBHashMap();
+        int a = 1000000;
         Long s1 = System.currentTimeMillis();
-        for (int i = 0; i < 1000000; i++) {
-            hashMap.put("wb" + i, "test"+ i);
+        for (int i = 0; i < a; i++) {
+            hashMap.put("wb" + i, "test" + i);
         }
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < a; i++) {
             hashMap.get("wb" + i);
         }
         System.out.println(System.currentTimeMillis() - s1);
         Long s = System.currentTimeMillis();
-        for (int i = 0; i < 1000000; i++) {
-            wbMap.put("wb" + i, "test"+ i);
+        for (int i = 0; i < a; i++) {
+            wbMap.put("wb" + i, "test" + i);
         }
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < a; i++) {
             wbMap.get("wb" + i);
         }
         System.out.println(System.currentTimeMillis() - s);

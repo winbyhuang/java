@@ -1,4 +1,4 @@
-package com.winby.dataStructure.map.hashMap;
+package com.winby.tool.hashMap;
 
 /**
  * @author Winby

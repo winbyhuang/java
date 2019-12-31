@@ -1,4 +1,4 @@
-package com.winby.problem.leetcode;
+package com.winby.problem.leetcode.normal;
 
 import com.alibaba.fastjson.JSON;
 

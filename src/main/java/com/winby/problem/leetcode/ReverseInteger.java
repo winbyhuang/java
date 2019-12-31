@@ -32,19 +32,31 @@ public class ReverseInteger {
      * 顺序遍历
      */
     public static int solution1(int x) {
-
-        return 0;
+        int result=0;
+        while (x != 0){
+            if(result > Integer.MAX_VALUE/10 || (result == (Integer.MAX_VALUE/10) && x%10 >7)){
+                return 0;
+            }
+            if(result <(Integer.MIN_VALUE/10) || (result == (Integer.MIN_VALUE/10) && x%10 < -8)){
+                return 0;
+            }
+            result = (result*10)+(x%10);
+            x /= 10;
+        }
+        return result;
     }
 
 
     public static void main(String[] args) {
 
         int result;
-        result = solution1(123);
-        System.out.println(JSON.toJSON(result));
-        result = solution1(-123);
-        System.out.println(JSON.toJSON(result));
-        result = solution1(120);
+//        result = solution1(123);
+//        System.out.println(JSON.toJSON(result));
+//        result = solution1(-123);
+//        System.out.println(JSON.toJSON(result));
+//        result = solution1(120);
+//        System.out.println(JSON.toJSON(result));
+        result = solution1(1534236469);
         System.out.println(JSON.toJSON(result));
     }
 

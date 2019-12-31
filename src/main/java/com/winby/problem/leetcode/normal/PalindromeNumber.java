@@ -29,22 +29,57 @@ package com.winby.problem.leetcode.normal;
  */
 public class PalindromeNumber {
     /**
-     * 顺序遍历
+     * 组成数组，再头尾比较
      */
     public static boolean isPalindrome(int x) {
-        byte[] nums = new byte[20];
-        int i=0;
-        while(x != 0){
-//            nums.
+        boolean result = false;
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return result;
         }
-        return false;
+        byte[] nums = new byte[10];
+        int end = 0;
+        while (x != 0) {
+            nums[end++] = (byte) (x % 10);
+            x /= 10;
+        }
+        int start = 0;
+        result = true;
+        while (start < --end) {
+            if (nums[start] != nums[end]) {
+                result = false;
+                break;
+            }
+            start++;
+        }
+        return result;
+    }
+
+    /**
+     *组成新数字，比较相等
+     * 同一个数字时要除以10
+     */
+    public boolean isPalindrome2(int x) {
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int newNum = 0;
+        while (x > newNum) {
+            newNum = newNum * 10 + x % 10;
+            x /= 10;
+        }
+        return (newNum == x || newNum / 10 == x);
     }
 
 
     public static void main(String[] args) {
-        int x = 123;
         boolean result;
-        result = isPalindrome(x);
+//        result = isPalindrome(121);
+//        System.out.println(result);
+//        result = isPalindrome(-121);
+//        System.out.println(result);
+//        result = isPalindrome(10);
+//        System.out.println(result);
+        result = isPalindrome(10022201);
         System.out.println(result);
     }
 }
